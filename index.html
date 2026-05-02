@@ -3,24 +3,672 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Tangiers Mediterranean Cafe | Fayetteville, AR</title>
+<title>Tangiers Mediterranean Cafe | Fayetteville</title>
+
 <style>
-:root{--sea:#006f8e;--aqua:#00a6bb;--deep:#04171a;--night:#020b0d;--saffron:#e6aa3f;--clay:#c66a3d;--cream:#fff2dc;--paper:#fffaf1;--ink:#101010;--muted:#74685c;--tangier-houses:url("https://www.travel-exploration.com/images/Tangier-Private-Tour-Travel-Exploration-Morocco_7uwy5qf549ss.jpg");--tangier-water:url("https://media.odynovotours.com/article/75000/tangier-surrounded-by-sea_74585.jpg");--food-hero:url("https://img.cdn4dd.com/cdn-cgi/image/fit=cover,width=600,height=400,format=auto,quality=80/https://doordash-static.s3.amazonaws.com/media/store/header/37ecd8d9-08ac-467e-a8d2-04d92b386b46.jpg");--hummus:url("https://tb-static.uber.com/prod/image-proc/processed_images/c427361e246d64c2af5a89a9e8c41543/fb86662148be855d931b37d6c1e5fcbe.jpeg");--spread:url("https://spoonuniversity.com/cdn-cgi/image/width=6016,height=4000,fit=cover,format=auto/https://s3.amazonaws.com/secretsaucefiles/photos/images/000/058/606/original/IMG_1527.JPG?1478720030");--album1:url("https://cdn.res-menu.net/tangiers/albums-1.jpg");--album3:url("https://cdn.res-menu.net/tangiers/albums-3.jpg")}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Arial,sans-serif;background:var(--cream);color:var(--ink);overflow-x:hidden}body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-2;background:radial-gradient(circle at 20% 5%,rgba(0,166,187,.18),transparent 30%),radial-gradient(circle at 90% 10%,rgba(230,170,63,.22),transparent 28%),radial-gradient(circle at 70% 90%,rgba(198,106,61,.16),transparent 28%),var(--cream)}body:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;opacity:.14;background-image:linear-gradient(45deg,transparent 47%,rgba(0,111,142,.7) 48%,transparent 50%),linear-gradient(-45deg,transparent 47%,rgba(230,170,63,.7) 48%,transparent 50%);background-size:46px 46px}header{position:fixed;top:0;left:0;width:100%;z-index:1000;padding:18px 7%;display:flex;justify-content:space-between;align-items:center;background:rgba(2,11,13,.72);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.14);color:white}.logo{font-size:1.3rem;font-weight:950;letter-spacing:4px}.logo span{color:var(--saffron)}nav a{color:white;text-decoration:none;margin-left:26px;font-size:.9rem;font-weight:900}nav a:hover{color:var(--saffron)}
-.hero{min-height:100vh;position:relative;padding:135px 7% 100px;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;color:white;background:linear-gradient(115deg,rgba(2,11,13,.92),rgba(0,111,142,.45),rgba(230,170,63,.10)),var(--tangier-water) center/cover no-repeat fixed;overflow:hidden}.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(to right,rgba(2,11,13,.92) 0%,rgba(2,11,13,.70) 38%,rgba(0,111,142,.20) 100%),radial-gradient(circle at 70% 35%,rgba(255,255,255,.18),transparent 28%)}.hero:after{content:"";position:absolute;left:-10%;right:-10%;bottom:-80px;height:220px;background:radial-gradient(ellipse at center,rgba(255,255,255,.28),transparent 34%),repeating-linear-gradient(170deg,rgba(255,255,255,.16) 0 2px,transparent 2px 19px);opacity:.55;filter:blur(.2px);animation:waterMove 7s ease-in-out infinite alternate}@keyframes waterMove{from{transform:translateX(-35px) translateY(0)}to{transform:translateX(35px) translateY(-14px)}}.hero-copy{position:relative;z-index:3}.kicker{display:inline-flex;gap:10px;align-items:center;padding:10px 17px;border-radius:999px;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.12);text-transform:uppercase;letter-spacing:2px;font-weight:950;font-size:.76rem}.kicker:before{content:"";width:9px;height:9px;border-radius:50%;background:var(--saffron);box-shadow:0 0 18px var(--saffron)}h1,h2{font-family:Georgia,serif;letter-spacing:-3px}h1{font-size:clamp(4rem,8.3vw,8.8rem);line-height:.82;margin:24px 0}.hero p{max-width:700px;color:rgba(255,255,255,.88);font-size:1.25rem;line-height:1.75}.buttons{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}.btn{display:inline-flex;justify-content:center;align-items:center;min-height:56px;padding:16px 28px;border-radius:999px;text-decoration:none;font-weight:950;transition:.32s ease}.primary{background:var(--saffron);color:#111;box-shadow:0 22px 55px rgba(230,170,63,.34)}.secondary{color:white;border:2px solid rgba(255,255,255,.82)}.btn:hover{transform:translateY(-5px) scale(1.02)}
-.coast-visual{position:relative;z-index:3;height:650px;border-radius:52px}.coast-frame{position:absolute;inset:0;overflow:hidden;border-radius:52px;box-shadow:0 45px 120px rgba(0,0,0,.45);border:1px solid rgba(255,255,255,.22);background:var(--tangier-houses) center/cover no-repeat}.coast-frame:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(198,106,61,.75) 0 42%,rgba(0,111,142,.12) 42% 50%,rgba(0,111,142,.88) 50% 100%);mix-blend-mode:multiply}.coast-frame:after{content:"";position:absolute;right:-15%;top:0;width:65%;height:100%;background:var(--tangier-water) center/cover no-repeat;opacity:.62;clip-path:polygon(16% 0,100% 0,100% 100%,0 100%);animation:coastDrift 9s ease-in-out infinite alternate}@keyframes coastDrift{from{transform:scale(1.04) translateX(-22px)}to{transform:scale(1.09) translateX(28px)}}.food-card{position:absolute;left:-50px;bottom:48px;width:52%;height:260px;border-radius:36px;overflow:hidden;background:var(--hummus) center/cover no-repeat;border:1px solid rgba(255,255,255,.3);box-shadow:0 34px 90px rgba(0,0,0,.38);transform:rotate(-6deg);z-index:5}.tile-card{position:absolute;right:-25px;top:55px;width:205px;height:205px;border-radius:34px;background:radial-gradient(circle,rgba(230,170,63,.9) 12%,transparent 13%),radial-gradient(circle,rgba(0,166,187,.9) 12%,transparent 13%),var(--deep);background-position:0 0,28px 28px;background-size:56px 56px;border:1px solid rgba(255,255,255,.3);box-shadow:0 28px 80px rgba(0,0,0,.32);transform:rotate(8deg);z-index:6}.scroll-note{position:absolute;left:7%;bottom:32px;z-index:4;color:rgba(255,255,255,.75);font-weight:900;font-size:.78rem;letter-spacing:2px;text-transform:uppercase}.scroll-note span{display:inline-block;margin-left:8px;animation:bounce 1.2s ease-in-out infinite}@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
-.section{padding:110px 7%;position:relative}.split{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}.eyebrow{color:var(--sea);font-weight:950;text-transform:uppercase;letter-spacing:2px;font-size:.82rem}h2{font-size:clamp(2.75rem,5.2vw,5.5rem);line-height:.92;margin:14px 0 24px}.text{color:var(--muted);font-size:1.12rem;line-height:1.85}.image-stack{position:relative;min-height:560px}.stack-img{position:absolute;overflow:hidden;border-radius:42px;box-shadow:0 35px 100px rgba(0,0,0,.20);transition:.4s ease}.stack-img:hover{transform:translateY(-10px) rotate(0deg) scale(1.02)!important}.stack-img img{width:100%;height:100%;object-fit:cover;display:block}.stack-big{right:0;top:0;width:74%;height:420px;transform:rotate(2deg)}.stack-small{left:0;bottom:0;width:54%;height:285px;transform:rotate(-5deg);border:10px solid var(--cream)}.tile-band{background:var(--night);color:white;overflow:hidden}.tile-band:before{content:"";position:absolute;inset:0;opacity:.18;background-image:radial-gradient(circle,var(--aqua) 18%,transparent 19%),radial-gradient(circle,var(--saffron) 18%,transparent 19%);background-position:0 0,26px 26px;background-size:52px 52px}.tile-band>*{position:relative;z-index:2}.tile-band .eyebrow{color:var(--saffron)}.tile-band .text{color:rgba(255,255,255,.76)}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(235px,1fr));gap:24px;margin-top:44px}.card{min-height:285px;padding:32px;border-radius:36px;background:linear-gradient(180deg,rgba(255,255,255,.11),rgba(255,255,255,.04));border:1px solid rgba(255,255,255,.16);transition:.35s ease;overflow:hidden;position:relative}.card:before{content:"";position:absolute;right:-45px;top:-45px;width:140px;height:140px;border-radius:50%;background:rgba(230,170,63,.12)}.card:hover{transform:translateY(-12px);border-color:var(--saffron)}.card h3{margin:0 0 12px;color:var(--saffron);font-size:1.52rem}.card p{color:rgba(255,255,255,.76);line-height:1.7}.gallery{display:grid;grid-template-columns:1.1fr .9fr .9fr;gap:18px}.gallery img{width:100%;height:318px;object-fit:cover;border-radius:32px;box-shadow:0 25px 80px rgba(0,0,0,.16);transition:.35s ease}.gallery img:hover{transform:scale(1.025)}.gallery img:first-child{grid-row:span 2;height:654px}.tea-panel{margin:80px 7%;display:grid;grid-template-columns:.95fr 1.05fr;border-radius:52px;overflow:hidden;background:linear-gradient(135deg,rgba(4,23,26,.96),rgba(0,111,142,.82)),var(--album3) center/cover;color:white;box-shadow:0 40px 110px rgba(0,0,0,.25)}.tea-panel img{width:100%;height:100%;min-height:540px;object-fit:cover}.tea-copy{padding:76px;background:linear-gradient(135deg,rgba(3,17,20,.82),rgba(3,17,20,.32))}.tea-panel .eyebrow{color:var(--saffron)}.tea-panel .text{color:rgba(255,255,255,.78)}.visit{color:white;text-align:center;background:linear-gradient(rgba(3,17,20,.78),rgba(3,17,20,.82)),var(--food-hero) center/cover no-repeat}.visit .text{color:rgba(255,255,255,.84)}footer{background:#031114;color:white;text-align:center;padding:40px 7%}.reveal{opacity:0;transform:translateY(55px);transition:1s ease}.reveal.active{opacity:1;transform:translateY(0)}.float-slow{animation:floatSlow 6.5s ease-in-out infinite}@keyframes floatSlow{0%,100%{transform:translateY(0)}50%{transform:translateY(-18px)}}@media(max-width:900px){header{flex-direction:column;gap:12px;padding:16px 5%}nav a{margin:0 8px;font-size:.82rem}.hero,.split,.tea-panel{grid-template-columns:1fr}.coast-visual{height:500px}.food-card{left:18px;width:58%}.tile-card{right:18px}.gallery{grid-template-columns:1fr}.gallery img,.gallery img:first-child{height:310px}.tea-panel{margin:50px 5%}.tea-copy{padding:44px 28px}.image-stack{min-height:470px}}
+:root{
+  --sea:#006b82;
+  --deep:#061f22;
+  --midnight:#031113;
+  --saffron:#e5a93a;
+  --clay:#b95f3d;
+  --cream:#fff2db;
+  --paper:#fffaf0;
+  --ink:#101010;
+  --muted:#706558;
+
+  --food1:url("https://tb-static.uber.com/prod/image-proc/processed_images/c427361e246d64c2af5a89a9e8c41543/fb86662148be855d931b37d6c1e5fcbe.jpeg");
+  --food2:url("https://img.cdn4dd.com/cdn-cgi/image/fit=cover,width=600,height=400,format=auto,quality=80/https://doordash-static.s3.amazonaws.com/media/store/header/37ecd8d9-08ac-467e-a8d2-04d92b386b46.jpg");
+  --food3:url("https://spoonuniversity.com/cdn-cgi/image/width=6016,height=4000,fit=cover,format=auto/https://s3.amazonaws.com/secretsaucefiles/photos/images/000/058/606/original/IMG_1527.JPG?1478720030");
+  --food4:url("https://cdn.res-menu.net/tangiers/albums-1.jpg");
+  --tea:url("https://cdn.res-menu.net/tangiers/albums-3.jpg");
+  --coast:url("https://media.odynovotours.com/article/75000/tangier-surrounded-by-sea_74585.jpg");
+  --coast2:url("https://www.travel-exploration.com/images/Tangier-Private-Tour-Travel-Exploration-Morocco_7uwy5qf549ss.jpg");
+}
+
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+  margin:0;
+  font-family:Inter, Arial, sans-serif;
+  color:var(--ink);
+  background:var(--cream);
+  overflow-x:hidden;
+}
+
+body:before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:-1;
+  opacity:.22;
+  background-image:
+    linear-gradient(45deg, rgba(0,107,130,.18) 1px, transparent 1px),
+    linear-gradient(-45deg, rgba(185,95,61,.12) 1px, transparent 1px);
+  background-size:38px 38px;
+}
+
+header{
+  position:fixed;
+  inset:0 0 auto 0;
+  height:76px;
+  z-index:1000;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:0 7%;
+  color:white;
+  background:rgba(3,17,19,.72);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(255,255,255,.14);
+}
+
+.logo{
+  font-weight:950;
+  letter-spacing:4px;
+  font-size:1.25rem;
+}
+
+.logo span{color:var(--saffron)}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:26px;
+  font-weight:900;
+  font-size:.92rem;
+}
+
+nav a:hover{color:var(--saffron)}
+
+.hero{
+  min-height:100vh;
+  padding:140px 7% 90px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+  color:white;
+  background:
+    linear-gradient(120deg, rgba(3,17,19,.96), rgba(0,107,130,.72), rgba(229,169,58,.2)),
+    var(--coast) center/cover fixed;
+  position:relative;
+  overflow:hidden;
+}
+
+.hero:after{
+  content:"";
+  position:absolute;
+  inset:auto 0 0 0;
+  height:170px;
+  background:linear-gradient(transparent,var(--cream));
+}
+
+.water{
+  position:absolute;
+  right:-8%;
+  top:0;
+  width:58%;
+  height:100%;
+  background:
+    radial-gradient(ellipse at center, rgba(255,255,255,.35), transparent 28%),
+    repeating-linear-gradient(160deg, rgba(255,255,255,.18) 0 2px, transparent 2px 22px);
+  opacity:.34;
+  animation:waterMove 8s ease-in-out infinite alternate;
+  mix-blend-mode:screen;
+}
+
+@keyframes waterMove{
+  from{transform:translateX(-35px)}
+  to{transform:translateX(35px)}
+}
+
+.hero-copy,.hero-art{position:relative;z-index:3}
+
+.kicker{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  border:1px solid rgba(255,255,255,.32);
+  background:rgba(255,255,255,.12);
+  padding:10px 16px;
+  border-radius:999px;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-weight:950;
+  font-size:.76rem;
+}
+
+.kicker:before{
+  content:"";
+  width:9px;
+  height:9px;
+  border-radius:50%;
+  background:var(--saffron);
+  box-shadow:0 0 20px var(--saffron);
+}
+
+h1,h2{
+  font-family:Georgia, serif;
+  letter-spacing:-3px;
+}
+
+h1{
+  margin:24px 0;
+  font-size:clamp(4rem,8.2vw,8.6rem);
+  line-height:.84;
+}
+
+.hero p{
+  max-width:650px;
+  color:rgba(255,255,255,.88);
+  font-size:1.22rem;
+  line-height:1.75;
+}
+
+.buttons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+  margin-top:34px;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:56px;
+  padding:16px 28px;
+  border-radius:999px;
+  text-decoration:none;
+  font-weight:950;
+  transition:.32s ease;
+}
+
+.primary{
+  background:var(--saffron);
+  color:#111;
+  box-shadow:0 20px 55px rgba(229,169,58,.32);
+}
+
+.secondary{
+  color:white;
+  border:2px solid rgba(255,255,255,.8);
+}
+
+.btn:hover{transform:translateY(-5px) scale(1.02)}
+
+.hero-art{
+  min-height:620px;
+}
+
+.frame{
+  position:absolute;
+  overflow:hidden;
+  border-radius:42px;
+  box-shadow:0 40px 120px rgba(0,0,0,.42);
+  border:1px solid rgba(255,255,255,.25);
+}
+
+.frame img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+.frame.main{
+  right:0;
+  top:35px;
+  width:82%;
+  height:520px;
+}
+
+.frame.food{
+  left:0;
+  bottom:30px;
+  width:48%;
+  height:270px;
+  transform:rotate(-5deg);
+}
+
+.tile-card{
+  position:absolute;
+  right:20px;
+  top:0;
+  width:210px;
+  height:210px;
+  border-radius:36px;
+  background:
+    linear-gradient(135deg, rgba(0,107,130,.95), rgba(6,31,34,.95)),
+    repeating-linear-gradient(45deg, transparent 0 20px, rgba(255,255,255,.12) 20px 22px);
+  border:1px solid rgba(255,255,255,.25);
+  transform:rotate(7deg);
+  box-shadow:0 30px 80px rgba(0,0,0,.25);
+}
+
+.section{
+  padding:105px 7%;
+}
+
+.split{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:center;
+  gap:70px;
+}
+
+.eyebrow{
+  color:var(--sea);
+  font-weight:950;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-size:.82rem;
+}
+
+h2{
+  margin:14px 0 24px;
+  font-size:clamp(2.7rem,5.2vw,5.4rem);
+  line-height:.92;
+}
+
+.text{
+  color:var(--muted);
+  font-size:1.12rem;
+  line-height:1.85;
+}
+
+.choice-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:24px;
+  margin-top:40px;
+}
+
+.choice{
+  min-height:430px;
+  border-radius:42px;
+  padding:34px;
+  color:white;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  overflow:hidden;
+  position:relative;
+  text-decoration:none;
+  box-shadow:0 30px 90px rgba(0,0,0,.18);
+}
+
+.choice:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(transparent,rgba(3,17,19,.88));
+  z-index:1;
+}
+
+.choice.food{background:var(--food2) center/cover}
+.choice.tea{background:var(--tea) center/cover}
+
+.choice>*{position:relative;z-index:2}
+
+.choice h3{
+  font-family:Georgia,serif;
+  font-size:3.2rem;
+  margin:0 0 12px;
+  letter-spacing:-2px;
+}
+
+.choice p{
+  font-size:1.05rem;
+  line-height:1.65;
+  color:rgba(255,255,255,.84);
+  max-width:450px;
+}
+
+.choice:hover{
+  transform:translateY(-8px);
+  transition:.35s ease;
+}
+
+.coast-section{
+  min-height:700px;
+  color:white;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:center;
+  gap:60px;
+  padding:110px 7%;
+  background:
+    linear-gradient(90deg, rgba(3,17,19,.86), rgba(0,107,130,.54)),
+    var(--coast2) center/cover fixed;
+  position:relative;
+  overflow:hidden;
+}
+
+.coast-section .water-panel{
+  position:absolute;
+  right:0;
+  top:0;
+  width:54%;
+  height:100%;
+  background:
+    linear-gradient(90deg, transparent, rgba(0,107,130,.65)),
+    repeating-linear-gradient(165deg, rgba(255,255,255,.24) 0 2px, transparent 2px 20px);
+  animation:waterMove 7s ease-in-out infinite alternate;
+  opacity:.55;
+}
+
+.glass-card{
+  position:relative;
+  z-index:3;
+  padding:44px;
+  border-radius:40px;
+  background:rgba(255,255,255,.14);
+  border:1px solid rgba(255,255,255,.28);
+  backdrop-filter:blur(14px);
+}
+
+.glass-card .eyebrow{color:var(--saffron)}
+.glass-card .text{color:rgba(255,255,255,.82)}
+
+.food-strip{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+
+.food-card{
+  background:white;
+  border-radius:30px;
+  overflow:hidden;
+  box-shadow:0 22px 70px rgba(0,0,0,.12);
+  transition:.35s ease;
+}
+
+.food-card:hover{transform:translateY(-10px)}
+
+.food-card img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  display:block;
+}
+
+.food-card div{padding:24px}
+
+.food-card h3{
+  margin:0 0 8px;
+  font-size:1.25rem;
+}
+
+.food-card p{
+  color:var(--muted);
+  line-height:1.55;
+  margin:0;
+}
+
+.tea-preview{
+  margin:80px 7%;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  overflow:hidden;
+  border-radius:52px;
+  background:var(--deep);
+  color:white;
+  box-shadow:0 40px 110px rgba(0,0,0,.22);
+}
+
+.tea-preview img{
+  width:100%;
+  height:100%;
+  min-height:540px;
+  object-fit:cover;
+}
+
+.tea-copy{
+  padding:76px;
+  background:
+    linear-gradient(135deg, rgba(3,17,19,.92), rgba(0,107,130,.35));
+}
+
+.tea-copy .eyebrow{color:var(--saffron)}
+.tea-copy .text{color:rgba(255,255,255,.8)}
+
+.visit{
+  text-align:center;
+  color:white;
+  background:
+    linear-gradient(rgba(3,17,19,.82), rgba(3,17,19,.82)),
+    var(--food2) center/cover fixed;
+}
+
+.visit .text{color:rgba(255,255,255,.84)}
+
+footer{
+  background:var(--midnight);
+  color:white;
+  text-align:center;
+  padding:40px 7%;
+}
+
+.reveal{
+  opacity:0;
+  transform:translateY(52px);
+  transition:1s ease;
+}
+
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
+}
+
+.float{
+  animation:float 6s ease-in-out infinite;
+}
+
+@keyframes float{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-18px)}
+}
+
+@media(max-width:900px){
+  header{
+    height:auto;
+    padding:15px 5%;
+    flex-direction:column;
+    gap:12px;
+  }
+
+  nav a{
+    margin:0 8px;
+    font-size:.82rem;
+  }
+
+  .hero,.split,.coast-section,.tea-preview{
+    grid-template-columns:1fr;
+  }
+
+  .hero-art{
+    min-height:430px;
+  }
+
+  .frame.main{
+    width:82%;
+    height:350px;
+  }
+
+  .frame.food{
+    width:55%;
+    height:210px;
+  }
+
+  .tile-card{display:none}
+
+  .choice-grid,.food-strip{
+    grid-template-columns:1fr;
+  }
+
+  .tea-preview{
+    margin:50px 5%;
+  }
+
+  .tea-copy{
+    padding:44px 28px;
+  }
+}
 </style>
 </head>
+
 <body>
-<header><div class="logo">TANGIERS <span>CAFE</span></div><nav><a href="#food">Food</a><a href="menu.html">Menu</a><a href="#tea">Tea</a><a href="#visit">Visit</a><a href="https://www.order.store/store/tangiers-mediterranean-cafe-fayetteville/ZF6qx2dJScCCJ8X8o0DFIg">Order</a></nav></header>
-<section class="hero"><div class="hero-copy reveal"><div class="kicker">Fayetteville Mediterranean Cafe</div><h1>Coastal Moroccan flavor, served in Fayetteville.</h1><p>Step into Tangiers for grilled kabobs, gyros, falafel, hummus, warm pita, sweet baklava, and loose-leaf tea inspired by the colors and coast of Morocco.</p><div class="buttons"><a class="btn primary" href="https://www.order.store/store/tangiers-mediterranean-cafe-fayetteville/ZF6qx2dJScCCJ8X8o0DFIg">Order Online</a><a class="btn secondary" href="menu.html">Explore Menu</a></div></div><div class="coast-visual reveal float-slow"><div class="coast-frame"></div><div class="food-card"></div><div class="tile-card"></div></div><div class="scroll-note">Scroll for the experience <span>↓</span></div></section>
-<section class="section split" id="food"><div class="reveal"><div class="eyebrow">Fresh • Grilled • Colorful</div><h2>Food that feels bright, generous, and made to share.</h2><p class="text">From smoky kabob plates and warm gyros to creamy hummus, crisp falafel, dolmas, rice plates, salads, and sweet desserts, Tangiers is built for a meal that feels full of life.</p><div class="buttons"><a class="btn primary" href="menu.html">View the Menu</a></div></div><div class="image-stack reveal"><div class="stack-img stack-big"><img src="https://spoonuniversity.com/cdn-cgi/image/width=6016,height=4000,fit=cover,format=auto/https://s3.amazonaws.com/secretsaucefiles/photos/images/000/058/606/original/IMG_1527.JPG?1478720030" alt="Tangiers Mediterranean spread"></div><div class="stack-img stack-small"><img src="https://tb-static.uber.com/prod/image-proc/processed_images/c427361e246d64c2af5a89a9e8c41543/fb86662148be855d931b37d6c1e5fcbe.jpeg" alt="Tangiers hummus platter"></div></div></section>
-<section class="section tile-band"><div class="reveal"><div class="eyebrow">Guest Favorites</div><h2>Start with the cravings. Make ordering easy.</h2><p class="text">Browse popular Mediterranean favorites, then jump straight into online ordering when you are ready.</p></div><div class="cards"><div class="card reveal"><h3>Kabob Plates</h3><p>Grilled chicken and beef served over rice with fresh sides, sauces, and warm Mediterranean flavor.</p></div><div class="card reveal"><h3>Gyros & Wraps</h3><p>Warm pita, seasoned meats, fresh vegetables, and creamy sauces for a fast, filling favorite.</p></div><div class="card reveal"><h3>Falafel & Hummus</h3><p>Crispy, creamy, herby, and perfect as a starter, side, or vegetarian meal.</p></div><div class="card reveal"><h3>Tea & Sweets</h3><p>Loose-leaf tea, baklava, and sweet finishes that give Tangiers its signature cafe character.</p></div></div></section>
-<section class="section"><div class="reveal"><div class="eyebrow">Gallery</div><h2>A table full of color, texture, and Mediterranean warmth.</h2></div><div class="gallery reveal"><img src="https://img.cdn4dd.com/cdn-cgi/image/fit=cover,width=600,height=400,format=auto,quality=80/https://doordash-static.s3.amazonaws.com/media/store/header/37ecd8d9-08ac-467e-a8d2-04d92b386b46.jpg" alt="Tangiers table spread"><img src="https://tb-static.uber.com/prod/image-proc/processed_images/c427361e246d64c2af5a89a9e8c41543/fb86662148be855d931b37d6c1e5fcbe.jpeg" alt="Tangiers hummus platter"><img src="https://cdn.res-menu.net/tangiers/albums-1.jpg" alt="Tangiers Mediterranean food"><img src="https://cdn.res-menu.net/tangiers/albums-3.jpg" alt="Tangiers tea and food"><img src="https://spoonuniversity.com/cdn-cgi/image/width=6016,height=4000,fit=cover,format=auto/https://s3.amazonaws.com/secretsaucefiles/photos/images/000/058/606/original/IMG_1527.JPG?1478720030" alt="Tangiers cafe meal"></div></section>
-<section class="tea-panel" id="tea"><img src="https://cdn.res-menu.net/tangiers/albums-3.jpg" alt="Tangiers tea and food"><div class="tea-copy reveal"><div class="eyebrow">Loose Leaf Tea</div><h2>A calmer finish to a bold Mediterranean meal.</h2><p class="text">Tangiers also offers loose-leaf tea and tea accessories, giving the cafe a warm, international feel that pairs beautifully with sweets, conversation, and a slower moment after lunch or dinner.</p><div class="buttons"><a class="btn primary" href="https://tangiersfactory.com/collections/loose-leaf-tea">Shop Tea</a><a class="btn secondary" href="menu.html">View Food Menu</a></div></div></section>
-<section class="section visit" id="visit"><div class="reveal"><div class="eyebrow" style="color:var(--saffron)">Visit Tangiers</div><h2>Find us on College Ave.</h2><p class="text">2800 N College Ave, Fayetteville, AR</p><div class="buttons" style="justify-content:center;"><a class="btn primary" href="https://www.order.store/store/tangiers-mediterranean-cafe-fayetteville/ZF6qx2dJScCCJ8X8o0DFIg">Order Online</a><a class="btn secondary" href="https://www.google.com/maps/search/Tangiers+Mediterranean+Cafe+Fayetteville+AR">Get Directions</a></div></div></section>
-<footer><p>© Tangiers Mediterranean Cafe • Fayetteville, Arkansas</p></footer>
-<script>const reveals=document.querySelectorAll(".reveal");const observer=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add("active")}})},{threshold:.14});reveals.forEach(el=>observer.observe(el));const coast=document.querySelector(".coast-visual");window.addEventListener("scroll",()=>{const y=window.scrollY;if(coast){coast.style.transform=`translateY(${y * -0.035}px)`}});</script>
+
+<header>
+  <div class="logo">TANGIERS <span>CAFE</span></div>
+  <nav>
+    <a href="menu.html">Food</a>
+    <a href="tea.html">Tea</a>
+    <a href="#coast">Coast</a>
+    <a href="#visit">Visit</a>
+    <a href="https://www.order.store/store/tangiers-mediterranean-cafe-fayetteville/ZF6qx2dJScCCJ8X8o0DFIg">Order</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="water"></div>
+
+  <div class="hero-copy reveal">
+    <div class="kicker">Mediterranean Cafe • Fayetteville</div>
+    <h1>A little Tangier on College Ave.</h1>
+    <p>
+      Warm pita, grilled kabobs, hummus, falafel, gyros, Moroccan tea, and coastal Mediterranean flavor
+      served in a casual Fayetteville cafe.
+    </p>
+    <div class="buttons">
+      <a class="btn primary" href="menu.html">Explore Food</a>
+      <a class="btn secondary" href="tea.html">Explore Tea</a>
+    </div>
+  </div>
+
+  <div class="hero-art reveal">
+    <div class="frame main float">
+      <img src="https://tb-static.uber.com/prod/image-proc/processed_images/c427361e246d64c2af5a89a9e8c41543/fb86662148be855d931b37d6c1e5fcbe.jpeg">
+    </div>
+    <div class="frame food">
+      <img src="https://img.cdn4dd.com/cdn-cgi/image/fit=cover,width=600,height=400,format=auto,quality=80/https://doordash-static.s3.amazonaws.com/media/store/header/37ecd8d9-08ac-467e-a8d2-04d92b386b46.jpg">
+    </div>
+    <div class="tile-card"></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="reveal">
+    <div class="eyebrow">Choose Your Experience</div>
+    <h2>Come hungry. Stay for tea.</h2>
+    <p class="text">Tangiers is built around two experiences: bold Mediterranean food and a calming tea house finish.</p>
+  </div>
+
+  <div class="choice-grid">
+    <a class="choice food reveal" href="menu.html">
+      <h3>Food</h3>
+      <p>Plates, gyros, kabobs, hummus, falafel, grape leaves, salads, sweets, and online ordering.</p>
+    </a>
+
+    <a class="choice tea reveal" href="tea.html">
+      <h3>Tea</h3>
+      <p>Loose leaf teas, Moroccan tea, accessories, and warm drinks to pair with lunch or dinner.</p>
+    </a>
+  </div>
+</section>
+
+<section class="coast-section" id="coast">
+  <div class="water-panel"></div>
+  <div></div>
+  <div class="glass-card reveal">
+    <div class="eyebrow">Inspired by Tangier</div>
+    <h2>Sea air, white buildings, blue tile, and a table full of food.</h2>
+    <p class="text">
+      The name Tangiers should feel like a place. This site brings in the feeling of Morocco’s coast with moving water,
+      warm sunlight, textured tile, and food that stays front and center.
+    </p>
+  </div>
+</section>
+
+<section class="section" id="food">
+  <div class="reveal">
+    <div class="eyebrow">Customer Favorites</div>
+    <h2>Mediterranean comfort food with color.</h2>
+  </div>
+
+  <div class="food-strip">
+    <div class="food-card reveal">
+      <img src="https://tb-static.uber.com/prod/image-proc/processed_images/c427361e246d64c2af5a89a9e8c41543/fb86662148be855d931b37d6c1e5fcbe.jpeg">
+      <div><h3>Hummus & Falafel</h3><p>Smooth hummus, crisp falafel, pita, and bright Mediterranean flavor.</p></div>
+    </div>
+
+    <div class="food-card reveal">
+      <img src="https://cdn.res-menu.net/tangiers/albums-1.jpg">
+      <div><h3>Kabob Plates</h3><p>Chicken, beef, or curry kabobs served over rice with fresh sides.</p></div>
+    </div>
+
+    <div class="food-card reveal">
+      <img src="https://spoonuniversity.com/cdn-cgi/image/width=6016,height=4000,fit=cover,format=auto/https://s3.amazonaws.com/secretsaucefiles/photos/images/000/058/606/original/IMG_1527.JPG?1478720030">
+      <div><h3>Gyros & Wraps</h3><p>Warm pita, gyro meat, chicken, falafel, vegetables, and sauce.</p></div>
+    </div>
+
+    <div class="food-card reveal">
+      <img src="https://img.cdn4dd.com/cdn-cgi/image/fit=cover,width=600,height=400,format=auto,quality=80/https://doordash-static.s3.amazonaws.com/media/store/header/37ecd8d9-08ac-467e-a8d2-04d92b386b46.jpg">
+      <div><h3>Sampler Plates</h3><p>A little of everything: falafel, grape leaves, hummus, pita, and sauces.</p></div>
+    </div>
+  </div>
+
+  <div class="buttons reveal">
+    <a class="btn primary" href="menu.html">View Full Food Menu</a>
+  </div>
+</section>
+
+<section class="tea-preview">
+  <img src="https://cdn.res-menu.net/tangiers/albums-3.jpg">
+  <div class="tea-copy reveal">
+    <div class="eyebrow">Loose Leaf Tea</div>
+    <h2>A slower finish after bold Mediterranean food.</h2>
+    <p class="text">
+      Pair your meal with hot Moroccan tea, iced tea, or explore Tangiers’ loose leaf tea collection and accessories.
+    </p>
+    <div class="buttons">
+      <a class="btn primary" href="tea.html">Explore Tea</a>
+      <a class="btn secondary" href="menu.html">View Food Menu</a>
+    </div>
+  </div>
+</section>
+
+<section class="section visit" id="visit">
+  <div class="reveal">
+    <div class="eyebrow" style="color:var(--saffron)">Visit</div>
+    <h2>Visit Tangiers Mediterranean Cafe</h2>
+    <p class="text">2800 N College Ave, Fayetteville, AR</p>
+    <div class="buttons" style="justify-content:center">
+      <a class="btn primary" href="https://www.order.store/store/tangiers-mediterranean-cafe-fayetteville/ZF6qx2dJScCCJ8X8o0DFIg">Order Online</a>
+      <a class="btn secondary" href="https://www.google.com/maps/search/Tangiers+Mediterranean+Cafe+Fayetteville+AR">Get Directions</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© Tangiers Mediterranean Cafe • Fayetteville, Arkansas</p>
+</footer>
+
+<script>
+const reveals=document.querySelectorAll(".reveal");
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting) entry.target.classList.add("active");
+  });
+},{threshold:.14});
+reveals.forEach(el=>observer.observe(el));
+</script>
+
 </body>
 </html>
