@@ -7,15 +7,23 @@
 
 <style>
 :root{
-  --ocean:#006b88;
-  --deep:#062326;
-  --tile:#0f8fa3;
-  --clay:#c56a3a;
-  --saffron:#e0a733;
+  --sea:#006d86;
+  --deep:#061d21;
+  --night:#031114;
+  --tile:#00a0b6;
+  --saffron:#e2a93b;
+  --clay:#c9683d;
   --cream:#fff4df;
   --paper:#fffaf0;
-  --ink:#101010;
-  --muted:#6f6255;
+  --white:#fff;
+  --ink:#111;
+  --muted:#74685c;
+
+  --img-hero:url("https://img.cdn4dd.com/cdn-cgi/image/fit=cover,width=600,height=400,format=auto,quality=80/https://doordash-static.s3.amazonaws.com/media/store/header/37ecd8d9-08ac-467e-a8d2-04d92b386b46.jpg");
+  --img-food:url("https://tb-static.uber.com/prod/image-proc/processed_images/c427361e246d64c2af5a89a9e8c41543/fb86662148be855d931b37d6c1e5fcbe.jpeg");
+  --img-spread:url("https://spoonuniversity.com/cdn-cgi/image/width=6016,height=4000,fit=cover,format=auto/https://s3.amazonaws.com/secretsaucefiles/photos/images/000/058/606/original/IMG_1527.JPG?1478720030");
+  --img-one:url("https://cdn.res-menu.net/tangiers/albums-1.jpg");
+  --img-three:url("https://cdn.res-menu.net/tangiers/albums-3.jpg");
 }
 
 *{box-sizing:border-box}
@@ -24,11 +32,8 @@ html{scroll-behavior:smooth}
 
 body{
   margin:0;
-  font-family:Arial, sans-serif;
-  background:
-    radial-gradient(circle at top left, rgba(0,143,163,.18), transparent 30%),
-    radial-gradient(circle at bottom right, rgba(224,167,51,.22), transparent 30%),
-    var(--cream);
+  font-family:Inter, Arial, sans-serif;
+  background:var(--cream);
   color:var(--ink);
   overflow-x:hidden;
 }
@@ -37,34 +42,47 @@ body:before{
   content:"";
   position:fixed;
   inset:0;
+  z-index:-2;
+  background:
+    radial-gradient(circle at 15% 10%, rgba(0,160,182,.22), transparent 28%),
+    radial-gradient(circle at 85% 20%, rgba(226,169,59,.24), transparent 30%),
+    radial-gradient(circle at 70% 90%, rgba(201,104,61,.18), transparent 28%),
+    var(--cream);
+}
+
+body:after{
+  content:"";
+  position:fixed;
+  inset:0;
   pointer-events:none;
-  opacity:.18;
-  background-image:
-    linear-gradient(45deg, transparent 46%, rgba(0,107,136,.35) 48%, transparent 50%),
-    linear-gradient(-45deg, transparent 46%, rgba(197,106,58,.28) 48%, transparent 50%);
-  background-size:42px 42px;
   z-index:-1;
+  opacity:.16;
+  background-image:
+    linear-gradient(45deg, transparent 47%, rgba(0,109,134,.7) 48%, transparent 50%),
+    linear-gradient(-45deg, transparent 47%, rgba(226,169,59,.65) 48%, transparent 50%);
+  background-size:46px 46px;
 }
 
 header{
   position:fixed;
   top:0;
+  left:0;
   width:100%;
   z-index:1000;
   padding:18px 7%;
   display:flex;
-  justify-content:space-between;
   align-items:center;
-  background:rgba(6,35,38,.72);
-  backdrop-filter:blur(18px);
-  border-bottom:1px solid rgba(255,255,255,.16);
+  justify-content:space-between;
   color:white;
+  background:rgba(3,17,20,.68);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(255,255,255,.14);
 }
 
 .logo{
-  font-weight:900;
+  font-size:1.3rem;
+  font-weight:950;
   letter-spacing:4px;
-  font-size:1.25rem;
 }
 
 .logo span{color:var(--saffron)}
@@ -74,49 +92,81 @@ nav a{
   text-decoration:none;
   margin-left:26px;
   font-weight:900;
-  font-size:.92rem;
+  font-size:.9rem;
 }
 
 nav a:hover{color:var(--saffron)}
 
 .hero{
   min-height:100vh;
-  padding:140px 7% 90px;
+  position:relative;
+  color:white;
   display:grid;
   grid-template-columns:1.05fr .95fr;
-  gap:60px;
   align-items:center;
-  color:white;
-  background:
-    linear-gradient(120deg, rgba(6,35,38,.95), rgba(0,107,136,.74), rgba(197,106,58,.35)),
-    url("assets/images/blue-table-feast.png") center/cover no-repeat;
-  position:relative;
+  gap:60px;
+  padding:145px 7% 100px;
   overflow:hidden;
+  background:
+    linear-gradient(115deg, rgba(3,17,20,.96) 0%, rgba(0,109,134,.76) 52%, rgba(226,169,59,.18) 100%),
+    var(--img-spread) center/cover no-repeat fixed;
+}
+
+.hero:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 25% 35%, rgba(255,255,255,.16), transparent 22%),
+    linear-gradient(to bottom, transparent 70%, var(--cream));
+  pointer-events:none;
 }
 
 .hero:after{
-  content:"";
+  content:"TANGIER • COAST • TEA • FIRE • SPICE •";
   position:absolute;
-  inset:auto 0 0 0;
-  height:150px;
-  background:linear-gradient(transparent,var(--cream));
+  bottom:40px;
+  left:-4%;
+  white-space:nowrap;
+  font-size:9vw;
+  line-height:1;
+  font-weight:950;
+  letter-spacing:-6px;
+  color:rgba(255,255,255,.055);
+  animation:marquee 24s linear infinite;
+}
+
+@keyframes marquee{
+  from{transform:translateX(0)}
+  to{transform:translateX(-28%)}
 }
 
 .hero-copy{
   position:relative;
-  z-index:2;
+  z-index:3;
 }
 
 .kicker{
-  display:inline-block;
-  padding:10px 18px;
-  border:1px solid rgba(255,255,255,.35);
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:10px 17px;
   border-radius:999px;
-  background:rgba(255,255,255,.12);
+  border:1px solid rgba(255,255,255,.28);
+  background:rgba(255,255,255,.11);
   text-transform:uppercase;
   letter-spacing:2px;
-  font-weight:900;
-  font-size:.78rem;
+  font-weight:950;
+  font-size:.76rem;
+}
+
+.kicker:before{
+  content:"";
+  width:9px;
+  height:9px;
+  background:var(--saffron);
+  border-radius:50%;
+  box-shadow:0 0 20px var(--saffron);
 }
 
 h1,h2{
@@ -125,23 +175,23 @@ h1,h2{
 }
 
 h1{
-  font-size:clamp(3.8rem,8vw,8.5rem);
-  line-height:.84;
+  font-size:clamp(4rem,8.2vw,8.8rem);
+  line-height:.82;
   margin:24px 0;
 }
 
 .hero p{
-  max-width:680px;
+  max-width:690px;
   font-size:1.25rem;
   line-height:1.75;
   color:rgba(255,255,255,.88);
 }
 
 .buttons{
+  margin-top:34px;
   display:flex;
   flex-wrap:wrap;
   gap:14px;
-  margin-top:32px;
 }
 
 .btn{
@@ -152,66 +202,99 @@ h1{
   padding:16px 28px;
   border-radius:999px;
   text-decoration:none;
-  font-weight:900;
-  transition:.3s ease;
+  font-weight:950;
+  transition:.32s ease;
 }
 
 .primary{
   background:var(--saffron);
   color:#111;
-  box-shadow:0 20px 50px rgba(224,167,51,.35);
+  box-shadow:0 20px 55px rgba(226,169,59,.34);
 }
 
 .secondary{
-  border:2px solid rgba(255,255,255,.85);
   color:white;
+  border:2px solid rgba(255,255,255,.82);
 }
 
 .btn:hover{
-  transform:translateY(-5px);
+  transform:translateY(-5px) scale(1.02);
 }
 
-.hero-card{
+.hero-visual{
   position:relative;
-  z-index:2;
-  background:rgba(255,255,255,.12);
-  border:1px solid rgba(255,255,255,.25);
-  border-radius:42px;
-  padding:18px;
-  backdrop-filter:blur(12px);
-  box-shadow:0 40px 100px rgba(0,0,0,.35);
-  transform:rotate(2deg);
+  z-index:3;
+  height:650px;
 }
 
-.hero-card img{
+.postcard{
+  position:absolute;
+  border-radius:38px;
+  overflow:hidden;
+  box-shadow:0 40px 120px rgba(0,0,0,.42);
+  border:1px solid rgba(255,255,255,.25);
+  background:white;
+}
+
+.postcard img{
   width:100%;
-  height:560px;
+  height:100%;
   object-fit:cover;
-  border-radius:32px;
   display:block;
 }
 
+.card-main{
+  inset:40px 0 0 90px;
+  transform:rotate(3deg);
+}
+
+.card-small{
+  width:47%;
+  height:250px;
+  left:0;
+  top:0;
+  transform:rotate(-8deg);
+  z-index:4;
+}
+
+.card-tile{
+  right:8%;
+  bottom:5%;
+  width:230px;
+  height:230px;
+  background:
+    radial-gradient(circle, rgba(226,169,59,.9) 12%, transparent 13%),
+    radial-gradient(circle, rgba(0,160,182,.9) 12%, transparent 13%),
+    var(--deep);
+  background-position:0 0, 28px 28px;
+  background-size:56px 56px;
+  border:1px solid rgba(255,255,255,.25);
+  transform:rotate(-5deg);
+  z-index:5;
+}
+
 .section{
-  padding:105px 7%;
+  padding:110px 7%;
+  position:relative;
 }
 
 .split{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:64px;
   align-items:center;
+  gap:70px;
 }
 
 .eyebrow{
-  color:var(--ocean);
-  font-weight:900;
+  color:var(--sea);
   text-transform:uppercase;
   letter-spacing:2px;
   font-size:.82rem;
+  font-weight:950;
 }
 
 h2{
-  font-size:clamp(2.7rem,5vw,5.4rem);
+  font-size:clamp(2.8rem,5.2vw,5.5rem);
   line-height:.92;
   margin:14px 0 24px;
 }
@@ -219,32 +302,63 @@ h2{
 .text{
   color:var(--muted);
   font-size:1.12rem;
-  line-height:1.85;
+  line-height:1.86;
 }
 
-.mosaic{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:18px;
+.coast-map{
+  min-height:600px;
+  border-radius:48px;
+  overflow:hidden;
+  position:relative;
+  box-shadow:0 35px 100px rgba(0,0,0,.2);
+  background:
+    linear-gradient(90deg, rgba(226,169,59,.2), transparent 45%),
+    var(--img-one) center/cover no-repeat;
 }
 
-.mosaic img{
-  width:100%;
-  height:260px;
-  object-fit:cover;
-  border-radius:30px;
-  box-shadow:0 24px 70px rgba(0,0,0,.16);
+.coast-map:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(90deg, rgba(201,104,61,.75) 0 38%, rgba(0,109,134,.25) 38% 50%, rgba(0,109,134,.82) 50% 100%);
+  mix-blend-mode:multiply;
 }
 
-.mosaic img:first-child{
-  grid-column:span 2;
-  height:360px;
+.coast-map:after{
+  content:"";
+  position:absolute;
+  right:-20%;
+  top:0;
+  width:70%;
+  height:100%;
+  background:
+    radial-gradient(ellipse at center, rgba(255,255,255,.45), transparent 25%),
+    repeating-linear-gradient(160deg, rgba(255,255,255,.18) 0 2px, transparent 2px 18px);
+  animation:water 8s ease-in-out infinite alternate;
+}
+
+@keyframes water{
+  from{transform:translateX(-20px)}
+  to{transform:translateX(20px)}
+}
+
+.mini-label{
+  position:absolute;
+  z-index:2;
+  left:30px;
+  bottom:30px;
+  background:rgba(255,255,255,.9);
+  color:#111;
+  padding:18px 22px;
+  border-radius:22px;
+  max-width:330px;
+  font-weight:900;
 }
 
 .tile-band{
-  background:var(--deep);
+  background:var(--night);
   color:white;
-  position:relative;
   overflow:hidden;
 }
 
@@ -252,119 +366,139 @@ h2{
   content:"";
   position:absolute;
   inset:0;
-  opacity:.15;
+  opacity:.18;
   background-image:
     radial-gradient(circle, var(--tile) 18%, transparent 19%),
     radial-gradient(circle, var(--saffron) 18%, transparent 19%);
-  background-position:0 0, 24px 24px;
-  background-size:48px 48px;
+  background-position:0 0, 26px 26px;
+  background-size:52px 52px;
 }
 
-.tile-band > *{
+.tile-band>*{
   position:relative;
   z-index:2;
 }
 
 .tile-band .eyebrow{color:var(--saffron)}
-.tile-band .text{color:rgba(255,255,255,.74)}
+.tile-band .text{color:rgba(255,255,255,.76)}
 
 .cards{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
   gap:24px;
-  margin-top:42px;
+  margin-top:44px;
 }
 
 .card{
-  min-height:260px;
+  min-height:270px;
   padding:30px;
   border-radius:34px;
-  background:linear-gradient(180deg,rgba(255,255,255,.1),rgba(255,255,255,.04));
+  background:linear-gradient(180deg,rgba(255,255,255,.11),rgba(255,255,255,.04));
   border:1px solid rgba(255,255,255,.16);
   transition:.35s ease;
+  position:relative;
+  overflow:hidden;
+}
+
+.card:before{
+  content:"";
+  position:absolute;
+  width:130px;
+  height:130px;
+  right:-40px;
+  top:-40px;
+  border-radius:50%;
+  background:rgba(226,169,59,.12);
 }
 
 .card:hover{
-  transform:translateY(-10px);
+  transform:translateY(-12px);
   border-color:var(--saffron);
 }
 
 .card h3{
-  margin:0 0 12px;
   color:var(--saffron);
-  font-size:1.45rem;
+  font-size:1.5rem;
+  margin:0 0 12px;
 }
 
 .card p{
-  line-height:1.7;
   color:rgba(255,255,255,.76);
+  line-height:1.7;
 }
-
-.coast{
-  display:grid;
-  grid-template-columns:.9fr 1.1fr;
-  gap:0;
-  margin:90px 7%;
-  border-radius:48px;
-  overflow:hidden;
-  background:linear-gradient(135deg,var(--ocean),var(--deep));
-  color:white;
-  box-shadow:0 40px 100px rgba(0,0,0,.22);
-}
-
-.coast img{
-  width:100%;
-  height:100%;
-  min-height:520px;
-  object-fit:cover;
-}
-
-.coast-copy{
-  padding:70px;
-}
-
-.coast .eyebrow{color:var(--saffron)}
-.coast .text{color:rgba(255,255,255,.78)}
 
 .gallery{
   display:grid;
-  grid-template-columns:1.1fr .9fr .9fr;
+  grid-template-columns:1.15fr .85fr .85fr;
   gap:18px;
 }
 
 .gallery img{
   width:100%;
-  height:310px;
+  height:315px;
   object-fit:cover;
-  border-radius:30px;
-  box-shadow:0 20px 70px rgba(0,0,0,.14);
+  border-radius:32px;
+  box-shadow:0 25px 80px rgba(0,0,0,.16);
+  transition:.35s ease;
+}
+
+.gallery img:hover{
+  transform:scale(1.025);
 }
 
 .gallery img:first-child{
   grid-row:span 2;
-  height:638px;
+  height:648px;
 }
+
+.tea-panel{
+  margin:80px 7%;
+  display:grid;
+  grid-template-columns:.95fr 1.05fr;
+  border-radius:52px;
+  overflow:hidden;
+  color:white;
+  background:
+    linear-gradient(135deg, rgba(6,29,33,.95), rgba(0,109,134,.85)),
+    var(--img-three) center/cover;
+  box-shadow:0 40px 110px rgba(0,0,0,.25);
+}
+
+.tea-panel img{
+  width:100%;
+  height:100%;
+  min-height:540px;
+  object-fit:cover;
+}
+
+.tea-copy{
+  padding:76px;
+  background:linear-gradient(135deg, rgba(3,17,20,.82), rgba(3,17,20,.32));
+}
+
+.tea-panel .eyebrow{color:var(--saffron)}
+.tea-panel .text{color:rgba(255,255,255,.78)}
 
 .visit{
   text-align:center;
-  background:
-    linear-gradient(rgba(6,35,38,.82),rgba(6,35,38,.82)),
-    url("assets/images/storefront.png") center/cover no-repeat;
   color:white;
+  background:
+    linear-gradient(rgba(3,17,20,.78), rgba(3,17,20,.82)),
+    var(--img-hero) center/cover no-repeat;
 }
 
-.visit .text{color:rgba(255,255,255,.82)}
+.visit .text{color:rgba(255,255,255,.84)}
 
 footer{
-  background:#041719;
+  background:#031114;
   color:white;
   text-align:center;
-  padding:38px 7%;
+  padding:40px 7%;
 }
 
 .reveal{
   opacity:0;
-  transform:translateY(48px);
+  transform:translateY(55px);
   transition:1s ease;
 }
 
@@ -373,35 +507,38 @@ footer{
   transform:translateY(0);
 }
 
-.float{
-  animation:float 5.5s ease-in-out infinite;
-}
-
-@keyframes float{
-  0%,100%{transform:translateY(0) rotate(2deg)}
-  50%{transform:translateY(-16px) rotate(1deg)}
+.parallax{
+  will-change:transform;
 }
 
 @media(max-width:900px){
   header{
     flex-direction:column;
     gap:12px;
-    padding:15px 5%;
+    padding:16px 5%;
   }
 
   nav a{
     margin:0 8px;
-    font-size:.84rem;
+    font-size:.82rem;
   }
 
   .hero,
   .split,
-  .coast{
+  .tea-panel{
     grid-template-columns:1fr;
   }
 
-  .hero-card img{
-    height:360px;
+  .hero-visual{
+    height:460px;
+  }
+
+  .card-main{
+    inset:60px 0 0 40px;
+  }
+
+  .card-small{
+    width:55%;
   }
 
   .gallery{
@@ -410,22 +547,18 @@ footer{
 
   .gallery img,
   .gallery img:first-child{
-    height:300px;
+    height:310px;
   }
 
-  .coast{
+  .tea-panel{
     margin:50px 5%;
   }
 
-  .coast-copy{
-    padding:42px 28px;
+  .tea-copy{
+    padding:44px 28px;
   }
 
-  .mosaic img,
-  .mosaic img:first-child{
-    height:260px;
-    grid-column:auto;
-  }
+  h1{letter-spacing:-2px}
 }
 </style>
 </head>
@@ -448,8 +581,8 @@ footer{
     <div class="kicker">Fayetteville Mediterranean Cafe</div>
     <h1>A little Tangier on College Ave.</h1>
     <p>
-      Coastal color, Moroccan warmth, Mediterranean plates, loose-leaf tea, grilled kabobs,
-      hummus, falafel, gyros, and a table that feels full before the food even arrives.
+      Moroccan coastal energy, Mediterranean plates, grilled kabobs, gyros, falafel, hummus,
+      loose-leaf tea, saffron warmth, blue-tile texture, and a table that feels alive.
     </p>
     <div class="buttons">
       <a class="btn primary" href="https://www.order.store/store/tangiers-mediterranean-cafe-fayetteville/ZF6qx2dJScCCJ8X8o0DFIg">Order Online</a>
@@ -457,34 +590,43 @@ footer{
     </div>
   </div>
 
-  <div class="hero-card reveal float">
-    <img src="assets/images/hummus-platter.png" alt="Tangiers hummus platter">
+  <div class="hero-visual reveal">
+    <div class="postcard card-small parallax" data-speed="-0.08">
+      <img src="https://cdn.res-menu.net/tangiers/albums-1.jpg" alt="Tangiers Mediterranean food">
+    </div>
+    <div class="postcard card-main parallax" data-speed="0.06">
+      <img src="https://tb-static.uber.com/prod/image-proc/processed_images/c427361e246d64c2af5a89a9e8c41543/fb86662148be855d931b37d6c1e5fcbe.jpeg" alt="Tangiers hummus platter">
+    </div>
+    <div class="postcard card-tile parallax" data-speed="-0.04"></div>
   </div>
 </section>
 
 <section class="section split" id="food">
   <div class="reveal">
-    <div class="eyebrow">Moroccan Coast Energy</div>
-    <h2>Not just a menu. A place with atmosphere.</h2>
+    <div class="eyebrow">Coastal Moroccan Direction</div>
+    <h2>Make the restaurant feel like a destination.</h2>
     <p class="text">
-      The old site feels like a tea shop first. This version makes the restaurant feel alive:
-      blue coastal tones, saffron warmth, tiled patterns, bold food photography, and a clear path to ordering.
+      The site should not feel like a basic food page. It should feel like walking toward the coast in Tangier:
+      tile patterns, sea blues, sun-washed cream, clay warmth, layered light, bold food, and a direct path to ordering.
     </p>
+    <div class="buttons">
+      <a class="btn primary" href="menu.html">View Menu</a>
+    </div>
   </div>
 
-  <div class="mosaic reveal">
-    <img src="assets/images/blue-table-feast.png" alt="Tangiers table spread">
-    <img src="assets/images/overhead-feast.png" alt="Mediterranean food spread">
-    <img src="assets/images/storefront.png" alt="Tangiers storefront">
+  <div class="coast-map reveal parallax" data-speed="0.05">
+    <div class="mini-label">
+      Coastal movement, Moroccan color, and food-first storytelling.
+    </div>
   </div>
 </section>
 
 <section class="section tile-band">
   <div class="reveal">
     <div class="eyebrow">Featured Favorites</div>
-    <h2>Built to make people hungry.</h2>
+    <h2>Built to make people hungry before they order.</h2>
     <p class="text">
-      Guests should understand the food instantly — plates, wraps, sides, sweets, and tea — without digging through a confusing site.
+      Big categories, richer movement, and better visual hierarchy make the ordering experience feel easier and more premium.
     </p>
   </div>
 
@@ -499,27 +641,11 @@ footer{
     </div>
     <div class="card reveal">
       <h3>Falafel & Hummus</h3>
-      <p>Crisp, creamy, herby, and perfect for sharing before the main plate.</p>
+      <p>Crisp, creamy, herby, and made for sharing before the main plate.</p>
     </div>
     <div class="card reveal">
       <h3>Tea & Sweets</h3>
-      <p>Loose-leaf tea, baklava, and small sweet finishes that support the cafe story.</p>
-    </div>
-  </div>
-</section>
-
-<section class="coast" id="tea">
-  <img src="assets/images/overhead-feast.png" alt="Tangiers Mediterranean food">
-  <div class="coast-copy reveal">
-    <div class="eyebrow">Tea Factory Soul</div>
-    <h2>Tea stays in the story — but food leads.</h2>
-    <p class="text">
-      Tangiers can keep the Tea Factory identity as a unique piece of the brand. The homepage should sell the restaurant first,
-      then use tea as the memorable detail that makes the cafe different from every other Mediterranean spot.
-    </p>
-    <div class="buttons">
-      <a class="btn primary" href="https://tangiersfactory.com/collections/loose-leaf-tea">Shop Tea</a>
-      <a class="btn secondary" href="menu.html">View Menu</a>
+      <p>Loose-leaf tea and sweet finishes keep the Tea Factory identity alive.</p>
     </div>
   </div>
 </section>
@@ -527,24 +653,40 @@ footer{
 <section class="section">
   <div class="reveal">
     <div class="eyebrow">Gallery</div>
-    <h2>Colorful, coastal, and full of life.</h2>
+    <h2>Color, texture, food, and atmosphere.</h2>
   </div>
 
   <div class="gallery reveal">
-    <img src="assets/images/blue-table-feast.png" alt="Tangiers table spread">
-    <img src="assets/images/hummus-platter.png" alt="Hummus and falafel">
-    <img src="assets/images/overhead-feast.png" alt="Mediterranean food spread">
-    <img src="assets/images/storefront.png" alt="Tangiers storefront">
-    <img src="assets/images/hummus-platter.png" alt="Mediterranean platter">
+    <img src="https://img.cdn4dd.com/cdn-cgi/image/fit=cover,width=600,height=400,format=auto,quality=80/https://doordash-static.s3.amazonaws.com/media/store/header/37ecd8d9-08ac-467e-a8d2-04d92b386b46.jpg" alt="Tangiers table spread">
+    <img src="https://tb-static.uber.com/prod/image-proc/processed_images/c427361e246d64c2af5a89a9e8c41543/fb86662148be855d931b37d6c1e5fcbe.jpeg" alt="Tangiers hummus">
+    <img src="https://cdn.res-menu.net/tangiers/albums-1.jpg" alt="Tangiers food">
+    <img src="https://cdn.res-menu.net/tangiers/albums-3.jpg" alt="Tangiers tea and food">
+    <img src="https://spoonuniversity.com/cdn-cgi/image/width=6016,height=4000,fit=cover,format=auto/https://s3.amazonaws.com/secretsaucefiles/photos/images/000/058/606/original/IMG_1527.JPG?1478720030" alt="Tangiers cafe food">
+  </div>
+</section>
+
+<section class="tea-panel" id="tea">
+  <img src="https://cdn.res-menu.net/tangiers/albums-3.jpg" alt="Tangiers tea and food">
+  <div class="tea-copy reveal">
+    <div class="eyebrow">Tea Factory Soul</div>
+    <h2>Tea stays in the story — but food leads.</h2>
+    <p class="text">
+      The Tea Factory identity gives the restaurant something unique. This version makes tea feel like a premium cultural layer,
+      not the thing that hides the restaurant.
+    </p>
+    <div class="buttons">
+      <a class="btn primary" href="https://tangiersfactory.com/collections/loose-leaf-tea">Shop Tea</a>
+      <a class="btn secondary" href="menu.html">View Food Menu</a>
+    </div>
   </div>
 </section>
 
 <section class="section visit" id="visit">
   <div class="reveal">
-    <div class="eyebrow" style="color:var(--saffron)">Visit</div>
+    <div class="eyebrow" style="color:var(--saffron)">Visit Tangiers</div>
     <h2>Find Tangiers in Fayetteville.</h2>
     <p class="text">2800 N College Ave, Fayetteville, AR</p>
-    <div class="buttons" style="justify-content:center">
+    <div class="buttons" style="justify-content:center;">
       <a class="btn primary" href="https://www.order.store/store/tangiers-mediterranean-cafe-fayetteville/ZF6qx2dJScCCJ8X8o0DFIg">Order Online</a>
       <a class="btn secondary" href="https://www.google.com/maps/search/Tangiers+Mediterranean+Cafe+Fayetteville+AR">Get Directions</a>
     </div>
@@ -557,16 +699,21 @@ footer{
 
 <script>
 const reveals = document.querySelectorAll(".reveal");
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if(entry.isIntersecting){
-      entry.target.classList.add("active");
-    }
+const observer = new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){ entry.target.classList.add("active"); }
   });
 },{threshold:.14});
+reveals.forEach(el=>observer.observe(el));
 
-reveals.forEach(el => observer.observe(el));
+const parallaxItems = document.querySelectorAll(".parallax");
+window.addEventListener("scroll", ()=>{
+  const y = window.scrollY;
+  parallaxItems.forEach(el=>{
+    const speed = parseFloat(el.dataset.speed || 0);
+    el.style.transform = `translateY(${y * speed}px)`;
+  });
+});
 </script>
 
 </body>
