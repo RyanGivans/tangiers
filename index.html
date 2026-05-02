@@ -6,463 +6,425 @@
 <title>Tangiers Mediterranean Cafe | Fayetteville</title>
 
 <style>
-:root {
-  --blue:#0077c8;
-  --deep-blue:#063f6b;
-  --gold:#d9a441;
-  --cream:#fff6e6;
+:root{
+  --ocean:#006b88;
+  --deep:#062326;
+  --tile:#0f8fa3;
+  --clay:#c56a3a;
+  --saffron:#e0a733;
+  --cream:#fff4df;
   --paper:#fffaf0;
-  --dark:#0d0d0d;
-  --green:#193d30;
-  --muted:#6b6258;
+  --ink:#101010;
+  --muted:#6f6255;
 }
 
-* { box-sizing:border-box; }
+*{box-sizing:border-box}
 
-html {
-  scroll-behavior:smooth;
-}
+html{scroll-behavior:smooth}
 
-body {
+body{
   margin:0;
-  font-family: Inter, Arial, sans-serif;
-  background:var(--cream);
-  color:var(--dark);
+  font-family:Arial, sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(0,143,163,.18), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(224,167,51,.22), transparent 30%),
+    var(--cream);
+  color:var(--ink);
   overflow-x:hidden;
 }
 
-body::before {
+body:before{
   content:"";
   position:fixed;
   inset:0;
   pointer-events:none;
-  background:
-    radial-gradient(circle at 10% 20%, rgba(217,164,65,.18), transparent 25%),
-    radial-gradient(circle at 90% 10%, rgba(0,119,200,.13), transparent 24%),
-    radial-gradient(circle at 80% 90%, rgba(25,61,48,.14), transparent 28%);
+  opacity:.18;
+  background-image:
+    linear-gradient(45deg, transparent 46%, rgba(0,107,136,.35) 48%, transparent 50%),
+    linear-gradient(-45deg, transparent 46%, rgba(197,106,58,.28) 48%, transparent 50%);
+  background-size:42px 42px;
   z-index:-1;
 }
 
-header {
+header{
   position:fixed;
   top:0;
   width:100%;
-  z-index:100;
+  z-index:1000;
+  padding:18px 7%;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:18px 7%;
-  background:rgba(7,7,7,.68);
+  background:rgba(6,35,38,.72);
   backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(255,255,255,.16);
   color:white;
-  border-bottom:1px solid rgba(255,255,255,.12);
 }
 
-.logo {
-  font-size:1.35rem;
-  letter-spacing:3px;
+.logo{
   font-weight:900;
+  letter-spacing:4px;
+  font-size:1.25rem;
 }
 
-.logo span {
-  color:var(--gold);
-}
+.logo span{color:var(--saffron)}
 
-nav a {
+nav a{
   color:white;
-  margin-left:24px;
   text-decoration:none;
-  font-weight:800;
+  margin-left:26px;
+  font-weight:900;
   font-size:.92rem;
 }
 
-nav a:hover {
-  color:var(--gold);
-}
+nav a:hover{color:var(--saffron)}
 
-.hero {
+.hero{
   min-height:100vh;
-  background:
-    linear-gradient(90deg, rgba(0,0,0,.82), rgba(0,0,0,.38), rgba(0,0,0,.18)),
-    url("assets/images/overhead-feast.png") center/cover no-repeat;
-  display:flex;
-  align-items:center;
   padding:140px 7% 90px;
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:60px;
+  align-items:center;
   color:white;
+  background:
+    linear-gradient(120deg, rgba(6,35,38,.95), rgba(0,107,136,.74), rgba(197,106,58,.35)),
+    url("assets/images/blue-table-feast.png") center/cover no-repeat;
   position:relative;
+  overflow:hidden;
 }
 
-.hero::after {
+.hero:after{
   content:"";
   position:absolute;
-  bottom:-1px;
-  left:0;
-  width:100%;
-  height:140px;
-  background:linear-gradient(transparent, var(--cream));
+  inset:auto 0 0 0;
+  height:150px;
+  background:linear-gradient(transparent,var(--cream));
 }
 
-.hero-content {
-  max-width:820px;
+.hero-copy{
   position:relative;
   z-index:2;
 }
 
-.kicker {
-  display:inline-flex;
-  gap:10px;
-  align-items:center;
-  background:rgba(255,255,255,.13);
-  border:1px solid rgba(255,255,255,.25);
-  padding:10px 16px;
+.kicker{
+  display:inline-block;
+  padding:10px 18px;
+  border:1px solid rgba(255,255,255,.35);
   border-radius:999px;
-  color:#fff;
-  font-weight:900;
-  letter-spacing:1.8px;
+  background:rgba(255,255,255,.12);
   text-transform:uppercase;
+  letter-spacing:2px;
+  font-weight:900;
   font-size:.78rem;
 }
 
-.hero h1 {
-  font-family: Georgia, serif;
-  font-size:clamp(3.4rem, 8vw, 7.7rem);
-  line-height:.9;
-  margin:22px 0;
-  letter-spacing:-4px;
+h1,h2{
+  font-family:Georgia, serif;
+  letter-spacing:-3px;
 }
 
-.hero p {
-  font-size:1.28rem;
-  max-width:650px;
-  line-height:1.65;
+h1{
+  font-size:clamp(3.8rem,8vw,8.5rem);
+  line-height:.84;
+  margin:24px 0;
+}
+
+.hero p{
+  max-width:680px;
+  font-size:1.25rem;
+  line-height:1.75;
   color:rgba(255,255,255,.88);
 }
 
-.buttons {
-  margin-top:34px;
+.buttons{
   display:flex;
   flex-wrap:wrap;
   gap:14px;
+  margin-top:32px;
 }
 
-.btn {
+.btn{
   display:inline-flex;
   align-items:center;
   justify-content:center;
+  min-height:56px;
   padding:16px 28px;
   border-radius:999px;
   text-decoration:none;
   font-weight:900;
-  transition:.28s ease;
+  transition:.3s ease;
 }
 
-.primary {
-  background:var(--gold);
+.primary{
+  background:var(--saffron);
   color:#111;
-  box-shadow:0 18px 40px rgba(217,164,65,.25);
+  box-shadow:0 20px 50px rgba(224,167,51,.35);
 }
 
-.primary:hover {
-  transform:translateY(-4px);
-  box-shadow:0 24px 60px rgba(217,164,65,.38);
-}
-
-.secondary {
-  border:2px solid rgba(255,255,255,.8);
+.secondary{
+  border:2px solid rgba(255,255,255,.85);
   color:white;
 }
 
-.secondary:hover {
-  background:white;
-  color:#111;
-  transform:translateY(-4px);
+.btn:hover{
+  transform:translateY(-5px);
 }
 
-.section {
-  padding:105px 7%;
+.hero-card{
   position:relative;
+  z-index:2;
+  background:rgba(255,255,255,.12);
+  border:1px solid rgba(255,255,255,.25);
+  border-radius:42px;
+  padding:18px;
+  backdrop-filter:blur(12px);
+  box-shadow:0 40px 100px rgba(0,0,0,.35);
+  transform:rotate(2deg);
 }
 
-.split {
+.hero-card img{
+  width:100%;
+  height:560px;
+  object-fit:cover;
+  border-radius:32px;
+  display:block;
+}
+
+.section{
+  padding:105px 7%;
+}
+
+.split{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:64px;
   align-items:center;
 }
 
-.eyebrow {
-  color:var(--blue);
+.eyebrow{
+  color:var(--ocean);
   font-weight:900;
-  letter-spacing:2px;
   text-transform:uppercase;
+  letter-spacing:2px;
   font-size:.82rem;
 }
 
-h2 {
-  font-family: Georgia, serif;
-  font-size:clamp(2.5rem, 5vw, 5rem);
-  line-height:.95;
+h2{
+  font-size:clamp(2.7rem,5vw,5.4rem);
+  line-height:.92;
   margin:14px 0 24px;
-  letter-spacing:-2px;
 }
 
-.text {
+.text{
+  color:var(--muted);
   font-size:1.12rem;
   line-height:1.85;
-  color:var(--muted);
 }
 
-.photo-frame {
-  position:relative;
-}
-
-.photo-frame img {
-  width:100%;
-  border-radius:34px;
-  box-shadow:0 35px 90px rgba(0,0,0,.25);
-  display:block;
-}
-
-.photo-frame::before {
-  content:"";
-  position:absolute;
-  inset:22px -22px -22px 22px;
-  border:3px solid var(--gold);
-  border-radius:34px;
-  z-index:-1;
-}
-
-.stats {
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
-  margin-top:34px;
-}
-
-.stat {
-  background:white;
-  border-radius:24px;
-  padding:22px;
-  box-shadow:0 18px 50px rgba(0,0,0,.08);
-}
-
-.stat strong {
-  display:block;
-  font-size:1.7rem;
-  color:var(--deep-blue);
-}
-
-.stat span {
-  color:var(--muted);
-  font-weight:800;
-  font-size:.9rem;
-}
-
-.menu-preview {
-  background:#090909;
-  color:white;
-  overflow:hidden;
-}
-
-.menu-preview .eyebrow {
-  color:var(--gold);
-}
-
-.menu-preview h2 {
-  max-width:900px;
-}
-
-.cards {
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(245px, 1fr));
-  gap:24px;
-  margin-top:44px;
-}
-
-.card {
-  background:linear-gradient(180deg,#1a1a1a,#101010);
-  border-radius:28px;
-  padding:30px;
-  border:1px solid rgba(255,255,255,.12);
-  transition:.35s ease;
-  min-height:230px;
-}
-
-.card:hover {
-  transform:translateY(-10px) scale(1.02);
-  border-color:var(--gold);
-}
-
-.card h3 {
-  color:var(--gold);
-  font-size:1.55rem;
-  margin:0 0 12px;
-}
-
-.card p {
-  color:rgba(255,255,255,.72);
-  line-height:1.7;
-}
-
-.gallery {
-  display:grid;
-  grid-template-columns:1.2fr .8fr .8fr;
-  gap:18px;
-}
-
-.gallery img {
-  width:100%;
-  height:320px;
-  object-fit:cover;
-  border-radius:28px;
-  box-shadow:0 20px 60px rgba(0,0,0,.13);
-}
-
-.gallery img:first-child {
-  grid-row:span 2;
-  height:658px;
-}
-
-.tea {
-  margin:40px 7% 90px;
-  border-radius:46px;
-  overflow:hidden;
+.mosaic{
   display:grid;
   grid-template-columns:1fr 1fr;
-  background:linear-gradient(135deg, #173a2c, #071c15);
-  color:white;
-  box-shadow:0 35px 100px rgba(0,0,0,.22);
+  gap:18px;
 }
 
-.tea-text {
+.mosaic img{
+  width:100%;
+  height:260px;
+  object-fit:cover;
+  border-radius:30px;
+  box-shadow:0 24px 70px rgba(0,0,0,.16);
+}
+
+.mosaic img:first-child{
+  grid-column:span 2;
+  height:360px;
+}
+
+.tile-band{
+  background:var(--deep);
+  color:white;
+  position:relative;
+  overflow:hidden;
+}
+
+.tile-band:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  opacity:.15;
+  background-image:
+    radial-gradient(circle, var(--tile) 18%, transparent 19%),
+    radial-gradient(circle, var(--saffron) 18%, transparent 19%);
+  background-position:0 0, 24px 24px;
+  background-size:48px 48px;
+}
+
+.tile-band > *{
+  position:relative;
+  z-index:2;
+}
+
+.tile-band .eyebrow{color:var(--saffron)}
+.tile-band .text{color:rgba(255,255,255,.74)}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:24px;
+  margin-top:42px;
+}
+
+.card{
+  min-height:260px;
+  padding:30px;
+  border-radius:34px;
+  background:linear-gradient(180deg,rgba(255,255,255,.1),rgba(255,255,255,.04));
+  border:1px solid rgba(255,255,255,.16);
+  transition:.35s ease;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+  border-color:var(--saffron);
+}
+
+.card h3{
+  margin:0 0 12px;
+  color:var(--saffron);
+  font-size:1.45rem;
+}
+
+.card p{
+  line-height:1.7;
+  color:rgba(255,255,255,.76);
+}
+
+.coast{
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:0;
+  margin:90px 7%;
+  border-radius:48px;
+  overflow:hidden;
+  background:linear-gradient(135deg,var(--ocean),var(--deep));
+  color:white;
+  box-shadow:0 40px 100px rgba(0,0,0,.22);
+}
+
+.coast img{
+  width:100%;
+  height:100%;
+  min-height:520px;
+  object-fit:cover;
+}
+
+.coast-copy{
   padding:70px;
 }
 
-.tea img {
+.coast .eyebrow{color:var(--saffron)}
+.coast .text{color:rgba(255,255,255,.78)}
+
+.gallery{
+  display:grid;
+  grid-template-columns:1.1fr .9fr .9fr;
+  gap:18px;
+}
+
+.gallery img{
   width:100%;
-  height:100%;
+  height:310px;
   object-fit:cover;
+  border-radius:30px;
+  box-shadow:0 20px 70px rgba(0,0,0,.14);
 }
 
-.tea .eyebrow {
-  color:var(--gold);
+.gallery img:first-child{
+  grid-row:span 2;
+  height:638px;
 }
 
-.tea .text {
-  color:rgba(255,255,255,.78);
-}
-
-.order-flow {
-  background:var(--paper);
-}
-
-.steps {
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:24px;
-  margin-top:40px;
-}
-
-.step {
-  background:white;
-  border-radius:28px;
-  padding:30px;
-  box-shadow:0 20px 60px rgba(0,0,0,.08);
-  border:1px solid rgba(0,0,0,.06);
-}
-
-.step-number {
-  width:46px;
-  height:46px;
-  border-radius:50%;
-  display:grid;
-  place-items:center;
-  background:var(--blue);
-  color:white;
-  font-weight:900;
-  margin-bottom:18px;
-}
-
-.visit {
+.visit{
+  text-align:center;
   background:
-    linear-gradient(rgba(0,74,126,.88), rgba(0,74,126,.88)),
+    linear-gradient(rgba(6,35,38,.82),rgba(6,35,38,.82)),
     url("assets/images/storefront.png") center/cover no-repeat;
   color:white;
-  text-align:center;
 }
 
-.visit .text {
-  color:rgba(255,255,255,.85);
-}
+.visit .text{color:rgba(255,255,255,.82)}
 
-footer {
-  background:#050505;
+footer{
+  background:#041719;
   color:white;
-  padding:40px 7%;
   text-align:center;
+  padding:38px 7%;
 }
 
-.reveal {
+.reveal{
   opacity:0;
-  transform:translateY(45px);
+  transform:translateY(48px);
   transition:1s ease;
 }
 
-.reveal.active {
+.reveal.active{
   opacity:1;
   transform:translateY(0);
 }
 
-.float {
-  animation:float 5s ease-in-out infinite;
+.float{
+  animation:float 5.5s ease-in-out infinite;
 }
 
-@keyframes float {
-  0%,100% { transform:translateY(0); }
-  50% { transform:translateY(-14px); }
+@keyframes float{
+  0%,100%{transform:translateY(0) rotate(2deg)}
+  50%{transform:translateY(-16px) rotate(1deg)}
 }
 
-@media(max-width:850px) {
-  header {
+@media(max-width:900px){
+  header{
     flex-direction:column;
     gap:12px;
-    padding:16px 5%;
+    padding:15px 5%;
   }
 
-  nav a {
+  nav a{
     margin:0 8px;
-    font-size:.85rem;
+    font-size:.84rem;
   }
 
-  .hero {
-    padding:150px 6% 90px;
-  }
-
+  .hero,
   .split,
-  .tea,
-  .steps {
+  .coast{
     grid-template-columns:1fr;
   }
 
-  .stats {
-    grid-template-columns:1fr;
+  .hero-card img{
+    height:360px;
   }
 
-  .gallery {
+  .gallery{
     grid-template-columns:1fr;
   }
 
   .gallery img,
-  .gallery img:first-child {
+  .gallery img:first-child{
     height:300px;
   }
 
-  .tea {
-    margin:30px 5% 70px;
+  .coast{
+    margin:50px 5%;
   }
 
-  .tea-text {
+  .coast-copy{
     padding:42px 28px;
+  }
+
+  .mosaic img,
+  .mosaic img:first-child{
+    height:260px;
+    grid-column:auto;
   }
 }
 </style>
@@ -482,145 +444,107 @@ footer {
 </header>
 
 <section class="hero">
-  <div class="hero-content reveal">
+  <div class="hero-copy reveal">
     <div class="kicker">Fayetteville Mediterranean Cafe</div>
-    <h1>Food that feels like a table full of stories.</h1>
+    <h1>A little Tangier on College Ave.</h1>
     <p>
-      A brighter, bolder home for Tangiers — Mediterranean plates, kabobs, gyros,
-      falafel, hummus, desserts, and loose-leaf tea brought together in one memorable cafe experience.
+      Coastal color, Moroccan warmth, Mediterranean plates, loose-leaf tea, grilled kabobs,
+      hummus, falafel, gyros, and a table that feels full before the food even arrives.
     </p>
     <div class="buttons">
       <a class="btn primary" href="https://www.order.store/store/tangiers-mediterranean-cafe-fayetteville/ZF6qx2dJScCCJ8X8o0DFIg">Order Online</a>
-      <a class="btn secondary" href="menu.html">View Menu</a>
+      <a class="btn secondary" href="menu.html">Explore Menu</a>
     </div>
+  </div>
+
+  <div class="hero-card reveal float">
+    <img src="assets/images/hummus-platter.png" alt="Tangiers hummus platter">
   </div>
 </section>
 
 <section class="section split" id="food">
   <div class="reveal">
-    <div class="eyebrow">The Restaurant First</div>
-    <h2>Mediterranean favorites made visual, simple, and craveable.</h2>
+    <div class="eyebrow">Moroccan Coast Energy</div>
+    <h2>Not just a menu. A place with atmosphere.</h2>
     <p class="text">
-      The current brand says Tea Factory, but the restaurant is the reason people visit.
-      This concept leads with food, ordering, location, and the experience — while keeping tea as a unique supporting feature.
+      The old site feels like a tea shop first. This version makes the restaurant feel alive:
+      blue coastal tones, saffron warmth, tiled patterns, bold food photography, and a clear path to ordering.
     </p>
-
-    <div class="stats">
-      <div class="stat">
-        <strong>01</strong>
-        <span>Food-first homepage</span>
-      </div>
-      <div class="stat">
-        <strong>02</strong>
-        <span>Clear online ordering</span>
-      </div>
-      <div class="stat">
-        <strong>03</strong>
-        <span>Tea as a brand layer</span>
-      </div>
-    </div>
   </div>
 
-  <div class="photo-frame reveal float">
-    <img src="assets/images/hummus-platter.png" alt="Tangiers Mediterranean platter">
+  <div class="mosaic reveal">
+    <img src="assets/images/blue-table-feast.png" alt="Tangiers table spread">
+    <img src="assets/images/overhead-feast.png" alt="Mediterranean food spread">
+    <img src="assets/images/storefront.png" alt="Tangiers storefront">
   </div>
 </section>
 
-<section class="section menu-preview">
+<section class="section tile-band">
   <div class="reveal">
     <div class="eyebrow">Featured Favorites</div>
-    <h2>Built to make people hungry before they even click order.</h2>
+    <h2>Built to make people hungry.</h2>
+    <p class="text">
+      Guests should understand the food instantly — plates, wraps, sides, sweets, and tea — without digging through a confusing site.
+    </p>
   </div>
 
   <div class="cards">
     <div class="card reveal">
-      <h3>Chicken Kabob Plate</h3>
-      <p>Grilled chicken over rice with bright Mediterranean sides and sauce.</p>
+      <h3>Kabob Plates</h3>
+      <p>Grilled chicken and beef over rice with bright Mediterranean sides.</p>
     </div>
     <div class="card reveal">
-      <h3>Gyro Plate</h3>
-      <p>Seasoned gyro meat, warm pita, vegetables, and creamy sauce.</p>
+      <h3>Gyros & Wraps</h3>
+      <p>Warm pita, seasoned meats, fresh vegetables, and creamy sauces.</p>
     </div>
     <div class="card reveal">
       <h3>Falafel & Hummus</h3>
-      <p>Crisp falafel with smooth hummus, herbs, pita, and fresh flavor.</p>
+      <p>Crisp, creamy, herby, and perfect for sharing before the main plate.</p>
     </div>
     <div class="card reveal">
-      <h3>Dolmas</h3>
-      <p>Classic stuffed grape leaves, presented as a signature Mediterranean side.</p>
+      <h3>Tea & Sweets</h3>
+      <p>Loose-leaf tea, baklava, and small sweet finishes that support the cafe story.</p>
     </div>
   </div>
+</section>
 
-  <div class="buttons reveal">
-    <a class="btn primary" href="menu.html">Explore Full Menu</a>
-    <a class="btn secondary" href="https://www.order.store/store/tangiers-mediterranean-cafe-fayetteville/ZF6qx2dJScCCJ8X8o0DFIg">Order Now</a>
+<section class="coast" id="tea">
+  <img src="assets/images/overhead-feast.png" alt="Tangiers Mediterranean food">
+  <div class="coast-copy reveal">
+    <div class="eyebrow">Tea Factory Soul</div>
+    <h2>Tea stays in the story — but food leads.</h2>
+    <p class="text">
+      Tangiers can keep the Tea Factory identity as a unique piece of the brand. The homepage should sell the restaurant first,
+      then use tea as the memorable detail that makes the cafe different from every other Mediterranean spot.
+    </p>
+    <div class="buttons">
+      <a class="btn primary" href="https://tangiersfactory.com/collections/loose-leaf-tea">Shop Tea</a>
+      <a class="btn secondary" href="menu.html">View Menu</a>
+    </div>
   </div>
 </section>
 
 <section class="section">
   <div class="reveal">
     <div class="eyebrow">Gallery</div>
-    <h2>The food already has the color. The website should show it.</h2>
+    <h2>Colorful, coastal, and full of life.</h2>
   </div>
 
   <div class="gallery reveal">
     <img src="assets/images/blue-table-feast.png" alt="Tangiers table spread">
-    <img src="assets/images/overhead-feast.png" alt="Mediterranean food spread">
     <img src="assets/images/hummus-platter.png" alt="Hummus and falafel">
+    <img src="assets/images/overhead-feast.png" alt="Mediterranean food spread">
     <img src="assets/images/storefront.png" alt="Tangiers storefront">
-    <img src="assets/images/overhead-feast.png" alt="Mediterranean meal">
-  </div>
-</section>
-
-<section class="tea" id="tea">
-  <div class="tea-text reveal">
-    <div class="eyebrow">Loose Leaf Tea</div>
-    <h2>Tea stays in the story — just not ahead of the food.</h2>
-    <p class="text">
-      The tea collection gives Tangiers a unique cultural layer. On this concept, tea becomes a polished secondary experience:
-      loose-leaf blends, accessories, and a calm reason to linger after the meal.
-    </p>
-    <div class="buttons">
-      <a class="btn primary" href="https://tangiersfactory.com/collections/loose-leaf-tea">Shop Tea</a>
-    </div>
-  </div>
-  <img src="assets/images/blue-table-feast.png" alt="Tangiers tea and food">
-</section>
-
-<section class="section order-flow">
-  <div class="reveal">
-    <div class="eyebrow">Ordering Flow</div>
-    <h2>Simple path from hungry to checkout.</h2>
-    <p class="text">
-      Instead of making customers hunt through the site, the ordering path is clear and repeated:
-      view favorites, browse the menu, then send them directly to the existing ordering platform.
-    </p>
-  </div>
-
-  <div class="steps">
-    <div class="step reveal">
-      <div class="step-number">1</div>
-      <h3>See the food</h3>
-      <p class="text">Large images and simple categories make the restaurant feel more premium.</p>
-    </div>
-    <div class="step reveal">
-      <div class="step-number">2</div>
-      <h3>Choose a category</h3>
-      <p class="text">Menu sections help people quickly find plates, gyros, sides, and sweets.</p>
-    </div>
-    <div class="step reveal">
-      <div class="step-number">3</div>
-      <h3>Order online</h3>
-      <p class="text">Buttons connect directly to the current online ordering system.</p>
-    </div>
+    <img src="assets/images/hummus-platter.png" alt="Mediterranean platter">
   </div>
 </section>
 
 <section class="section visit" id="visit">
   <div class="reveal">
-    <h2>Visit Tangiers Mediterranean Cafe</h2>
+    <div class="eyebrow" style="color:var(--saffron)">Visit</div>
+    <h2>Find Tangiers in Fayetteville.</h2>
     <p class="text">2800 N College Ave, Fayetteville, AR</p>
-    <div class="buttons" style="justify-content:center;">
+    <div class="buttons" style="justify-content:center">
       <a class="btn primary" href="https://www.order.store/store/tangiers-mediterranean-cafe-fayetteville/ZF6qx2dJScCCJ8X8o0DFIg">Order Online</a>
       <a class="btn secondary" href="https://www.google.com/maps/search/Tangiers+Mediterranean+Cafe+Fayetteville+AR">Get Directions</a>
     </div>
@@ -636,13 +560,13 @@ const reveals = document.querySelectorAll(".reveal");
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-    if (entry.isIntersecting) {
+    if(entry.isIntersecting){
       entry.target.classList.add("active");
     }
   });
-}, { threshold: 0.14 });
+},{threshold:.14});
 
-reveals.forEach((el) => observer.observe(el));
+reveals.forEach(el => observer.observe(el));
 </script>
 
 </body>
