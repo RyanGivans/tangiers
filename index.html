@@ -1,1 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tangiers Mediterranean Cafe</title>
 
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: white;
+}
+
+.hero {
+  height: 100vh;
+  background: url('https://images.unsplash.com/photo-1543353071-873f17a7a088') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  margin: 0;
+}
+
+.hero p {
+  font-size: 1.5rem;
+}
+
+.btn {
+  background: #c59d5f;
+  padding: 15px 30px;
+  color: white;
+  text-decoration: none;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.food-grid img {
+  width: 100%;
+  border-radius: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+  <div>
+    <h1>Tangiers</h1>
+    <p>Mediterranean Cafe</p>
+    <a class="btn" href="#">Order Online</a>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Our Food</h2>
+  <div class="food-grid">
+    <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d">
+    <img src="https://images.unsplash.com/photo-1604908177522-0400bc94c4de">
+    <img src="https://images.unsplash.com/photo-1617196038435-5b6e2d0f6d6b">
+  </div>
+</div>
+
+<div class="section">
+  <h2>Tea Experience</h2>
+  <p>Imported loose-leaf teas from around the world.</p>
+</div>
+
+<div class="section">
+  <h2>Visit Us</h2>
+  <p>Fayetteville, Arkansas</p>
+</div>
+
+</body>
+</html>
