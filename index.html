@@ -239,15 +239,21 @@ h1{
   position:absolute;
   right:20px;
   top:0;
-  width:210px;
-  height:210px;
+  width:230px;
+  height:230px;
   border-radius:36px;
-  background:
-    linear-gradient(135deg, rgba(0,107,130,.95), rgba(6,31,34,.95)),
-    repeating-linear-gradient(45deg, transparent 0 20px, rgba(255,255,255,.12) 20px 22px);
-  border:1px solid rgba(255,255,255,.25);
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.35);
   transform:rotate(7deg);
-  box-shadow:0 30px 80px rgba(0,0,0,.25);
+  box-shadow:0 30px 80px rgba(0,0,0,.35);
+}
+
+.tile-card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
 }
 
 .section{
@@ -335,18 +341,29 @@ h2{
 }
 
 .coast-section{
-  min-height:700px;
-  color:white;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  align-items:center;
-  gap:60px;
-  padding:110px 7%;
-  background:
-    linear-gradient(90deg, rgba(3,17,19,.86), rgba(0,107,130,.54)),
-    var(--coast2) center/cover fixed;
-  position:relative;
-  overflow:hidden;
+  <section class="coast-section" id="coast">
+  <div class="water-panel"></div>
+
+  <div class="coast-caption reveal">
+    <span>Tangier Inspired</span>
+    <strong>Moroccan coast, Mediterranean food, Fayetteville table.</strong>
+  </div>
+
+  <div class="glass-card reveal">
+    <div class="eyebrow">Inspired by Tangier</div>
+    <h2>Where the coast meets the table.</h2>
+    <p class="text">
+      Sea-blue tile, warm spices, fresh pita, grilled kabobs, hummus, falafel, Moroccan tea,
+      and a casual cafe experience that feels different from anywhere else in Fayetteville.
+    </p>
+
+    <div class="coast-points">
+      <div><strong>01</strong><span>Fresh Mediterranean plates</span></div>
+      <div><strong>02</strong><span>Moroccan tea house warmth</span></div>
+      <div><strong>03</strong><span>Easy online ordering</span></div>
+    </div>
+  </div>
+</section>
 }
 
 .coast-section .water-panel{
@@ -520,6 +537,61 @@ footer{
     padding:44px 28px;
   }
 }
+  .coast-caption{
+  position:relative;
+  z-index:3;
+  align-self:end;
+  max-width:420px;
+  padding:28px;
+  border-radius:30px;
+  background:rgba(255,255,255,.12);
+  border:1px solid rgba(255,255,255,.25);
+  backdrop-filter:blur(14px);
+}
+
+.coast-caption span{
+  display:block;
+  color:var(--saffron);
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-weight:950;
+  font-size:.8rem;
+  margin-bottom:12px;
+}
+
+.coast-caption strong{
+  display:block;
+  color:white;
+  font-family:Georgia,serif;
+  font-size:2.1rem;
+  line-height:1.05;
+}
+
+.coast-points{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+  margin-top:30px;
+}
+
+.coast-points div{
+  padding:18px;
+  border-radius:20px;
+  background:rgba(255,255,255,.13);
+  border:1px solid rgba(255,255,255,.18);
+}
+
+.coast-points strong{
+  color:var(--saffron);
+  display:block;
+  font-size:1.4rem;
+}
+
+.coast-points span{
+  color:white;
+  font-size:.85rem;
+  font-weight:800;
+}
 </style>
 </head>
 
@@ -559,7 +631,9 @@ footer{
     <div class="frame food">
       <img src="https://img.cdn4dd.com/cdn-cgi/image/fit=cover,width=600,height=400,format=auto,quality=80/https://doordash-static.s3.amazonaws.com/media/store/header/37ecd8d9-08ac-467e-a8d2-04d92b386b46.jpg">
     </div>
-    <div class="tile-card"></div>
+    <div class="tile-card image-tile">
+  <img src="https://greekfiesta.com/wp-content/uploads/2016/02/greekplatter.jpg" alt="Moroccan tea and Mediterranean food">
+</div>
   </div>
 </section>
 
